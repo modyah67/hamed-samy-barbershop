@@ -313,30 +313,45 @@ function sendToWhatsApp() {
 
 			<form id="bookingForm">
 
-				<input class="form-control mb-3" id="name" placeholder="اسمك">
-				<input class="form-control mb-3" id="phone" placeholder="رقم الموبايل">
+	<div class="form-group mb-3">
+		<input id="name" class="form-control" placeholder="اسمك" type="text">
+	</div>
 
-				<select class="form-control mb-3" id="service">
-					<option>اختار الخدمة</option>
-					<option>Haircut</option>
-					<option>Beard Trim</option>
-					<option>Skin Care</option>
-				</select>
+	<div class="form-group mb-3">
+		<input id="phone" class="form-control" placeholder="رقم الموبايل" type="text">
+	</div>
 
-				<select class="form-control mb-3" id="barber">
-					<option>اختار الحلاق</option>
-					<option>أحمد</option>
-					<option>محمد</option>
-					<option>سامي</option>
-				</select>
+	<div class="form-group mb-3">
+		<select id="service" class="form-control">
+			<option>اختار الخدمة</option>
+			<option>قص شعر (50 جنيه)</option>
+			<option>تدريج فيد (70 جنيه)</option>
+			<option>تحديد دقن (30 جنيه)</option>
+			<option>حلاقة كاملة (40 جنيه)</option>
+			<option>قص + دقن (90 جنيه)</option>
+		</select>
+	</div>
 
-				<textarea class="form-control mb-3" id="notes" placeholder="ملاحظات"></textarea>
+	<div class="form-group mb-3">
+		<select id="barber" class="form-control">
+			<option>اختار الحلاق</option>
+			<option>حامد</option>
+			<option>محمد</option>
+			<option>سامي</option>
+		</select>
+	</div>
 
-				<button type="button" onclick="sendWhatsApp()" class="btn btn-success btn-block">
-					احجز عبر واتساب
-				</button>
+	<div class="form-group mb-4">
+		<textarea id="notes" class="form-control" placeholder="ملاحظات (اختياري)"></textarea>
+	</div>
 
-			</form>
+	<!-- زر -->
+	<button type="button" onclick="sendToWhatsApp()" class="btn btn-success btn-block">
+		احجز عبر واتساب
+	</button>
+
+</form>
+
 
 		</div>
 </div>
